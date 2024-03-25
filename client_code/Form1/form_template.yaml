@@ -3,12 +3,27 @@ container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html'}
 components:
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: content_panel
-  layout_properties: {slot: default}
-  components: []
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - name: outlined_card_1
+    properties: {role: outlined-card}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'ZYHNLY,PFVQRE'}
+    components:
+    - name: outlined_button1
+      properties: {text: 'Clique aqui(Não é uma roleta russa que pode apagar sua system32,
+          confia em mim sou fofo ^-^)', role: outlined-button}
+      type: Button
+      layout_properties: {grid_position: 'EBLDGE,QAHWAR'}
+      event_bindings: {click: outlined_button_1_click}
+- name: outlined_1
+  properties: {role: outlined, placeholder: 'oi, clica no botão ali'}
+  type: TextBox
+  layout_properties: {slot: title}
